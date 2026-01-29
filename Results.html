@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crawl Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>📄 Crawled Pages</h2>
+
+{% if pages %}
+    {% for p in pages %}
+        <div class="card">
+            <h3>{{ p.url }}</h3>
+            <strong>{{ p.title }}</strong>
+            <p>{{ p.text }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No pages found.</p>
+{% endif %}
+
+<a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

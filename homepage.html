@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Web Crawler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🕷 Python Web Crawler Dashboard</h1>
+
+    <form method="post">
+        <input type="text" name="url" placeholder="Enter starting URL" required>
+
+        <input type="text" name="keyword" placeholder="Keyword (optional)">
+
+        <input type="number" name="depth" value="2" min="1" max="4">
+
+        <button type="submit">Start Crawling</button>
+    </form>
+
+    <p>
+        <a href="/stored">View Stored Results</a>
+    </p>
+</div>
+
+</body>
+</html>
